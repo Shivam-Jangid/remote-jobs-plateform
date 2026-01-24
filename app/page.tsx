@@ -82,7 +82,7 @@ export default function Home() {
 
               <div className="flex gap-6 mt-12">
                 <Link
-                  href="/apply"
+                  href="/platforms"
                   className="group relative px-7 border bg-foreground text-background border-foreground/40 rounded-xl font-semibold overflow-hidden"
                 >
                   <span className="relative z-10 py-3 transition-all duration-300 ease-in-out group-hover:blur-xl group-hover:-translate-y-full block">
