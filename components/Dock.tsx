@@ -30,7 +30,7 @@ export default function Dock() {
   };
 
   return (
-    <div className="fixed left-8 top-1/2 -translate-y-1/2 z-40">
+    <div className="fixed left-3 top-1/2 -translate-y-1/2 z-40">
       <div className="flex flex-col items-center gap-3 px-3 py-4 bg-white/90 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-2xl">
         {navItems.map((item, index) => (
           <Link
