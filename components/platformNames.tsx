@@ -2,29 +2,48 @@
 import { MessageCircle, ThumbsDownIcon, ThumbsUp } from "lucide-react";
 import Link from "next/link";
 
+interface PlatformProps {
+  name: string;
+  description?: string;
+  likes?: number;
+  dislikes?: number;
+  comments?: number;
+  href?: string;
+}
 
-
-export default function PlatformNames() {
+export default function PlatformNames({
+  name,
+  description = "",
+  likes = 0,
+  dislikes = 0,
+  comments = 0,
+  href = "#",
+}: PlatformProps) {
   return (
-     <div className="col-span-1 bg-purple-50/20">
-          <div className="border border-[#a59a9a] hover:ring-2 transition-all hover:ring-offset-1 rounded-xl p-5">
-            <a href = "https://www.turing.com/" className="font-medium text-2xl my-3 hover:underline hover:underline-offset-6 cursor-pointer transition-all delay-500 duration-1000  inline">Turing</a>
-            <p className="text-sm mt-4">Turing is a AI-powered tech services company that helps businesses worldwide source, vet, match, and manage remote software engineers</p>
-            <div className = "flex items-center justify-around mt-4">
-              <button className="border border-black/50 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:bg-linear-to-r hover:border-none hover:from-blue-600 transition-all hover:text-white hover:to-pink-400 hover:-translate-y-1 delay-75">
-                <ThumbsUp className=" size-5" />
-                <span className="group-hover:font-medium">124</span>
-              </button>
-              <button className="border border-black/50 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:shadow-xl hover:border-none hover:bg-red-600 transition-all hover:text-white  hover:translate-y-0.5 delay-75">
-                <ThumbsDownIcon className="size-5" />
-                <span className="group-hover:font-medium">10</span>
-              </button>
-              <Link href={'/platforms/turing'} className="border border-black/50 rounded-2xl flex items-center py-2 gap-2 px-4 group  hover:border-black transition-all delay-75">
-                <MessageCircle className=" size-5" />
-                <span className="group-hover:font-medium">20</span>
-              </Link>
-            </div>
+    <div className="col-span-1">
+      <div className="border border-slate-300 hover:ring-2 transition-all hover:ring-offset-1 rounded-xl p-5 bg-white">
+        <Link href={href} className="font-medium text-2xl my-3 hover:underline hover:underline-offset-6 cursor-pointer transition-all inline-block">
+          {name}
+        </Link>
+        <p className="text-sm mt-4 text-slate-700">{description}</p>
+        <div className="flex items-center justify-between mt-5">
+          <div className="flex items-center gap-3">
+            <button className="border border-slate-200 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:bg-green-400 hover:border-none transition-all">
+              <ThumbsUp />
+              <span className="group-hover:font-medium">{likes}</span>
+            </button>
+            <button className="border border-slate-200 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:bg-red-500/80 hover:border-none transition-all">
+              <ThumbsDownIcon />
+              <span className="group-hover:font-medium">{dislikes}</span>
+            </button>
           </div>
+
+          <Link href={href} className="border border-slate-200 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:bg-slate-100 transition-all">
+            <MessageCircle />
+            <span className="group-hover:font-medium">{comments}</span>
+          </Link>
         </div>
-  )
+      </div>
+    </div>
+  );
 }
