@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Dock from "@/components/Dock";
 import {Montserrat} from "next/font/google";
 import Footer from "@/components/footer";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         className={`antialiased ${mainFont.className} font-heading`}
       >
         <Navbar />
+        <Dock />
         {children}
         <Footer />
       </body>

@@ -18,5 +18,3 @@ export default function navbar() {
 
 
 
-
-// hover:bg-background hover:text-foreground hover:shadow-[0_0_3px_1px_white] white  rounded-lg bg-foreground/90 text-background

@@ -89,3 +89,9 @@
     @apply cursor-pointer;
   }
 }
+
+@layer components{
+   .button-el{
+      @apply border border-black/50 rounded-2xl flex items-center p-2 gap-2;
+   }
+}
