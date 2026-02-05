@@ -132,8 +132,8 @@ export default function page() {
           </div>
 
           <div className="mt-4 flex gap-2">
-            <button type="submit" className="px-4 py-2 bg-background/80 border hover:bg-foreground hover:text-background transition-all delay-100 font-medium text-white rounded-md">Submit Registration</button>
-            <button type="button" onClick={() => { setName(""); setSelectedCategories([]); setDescription(""); setJobs(""); setPaid(false); }} className="px-4 py-2 hover:bg-background/80 hover:text-foreground  border transition-all rounded-md">Reset</button>
+            <button type="submit" className="px-4 py-2 bg-background/90 border hover:bg-foreground hover:text-background transition-all delay-100 font-medium text-white rounded-md">Submit Registration</button>
+            <button type="button" onClick={() => { setName(""); setSelectedCategories([]); setDescription(""); setJobs(""); setPaid(false); }} className="px-4 py-2 hover:bg-background/90 hover:text-foreground  border transition-all rounded-md">Reset</button>
           </div>
         </form>
 

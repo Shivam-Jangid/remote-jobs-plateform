@@ -28,13 +28,13 @@ export default function PlatformNames({
         <p className="text-sm mt-4 text-slate-700">{description}</p>
         <div className="flex items-center justify-between mt-5">
           <div className="flex items-center gap-3">
-            <button className="border border-slate-200 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:bg-green-400 hover:border-none transition-all">
-              <ThumbsUp />
-              <span className="group-hover:font-medium">{likes}</span>
+            <button className="border border-slate-400 hover:border-green-600 rounded-2xl flex items-center py-2 gap-2 px-4 group transition-all">
+              <ThumbsUp className="group-hover:text-green-600"/>
+              <span className="group-hover:text-green-600 font-medium">{likes}</span>
             </button>
-            <button className="border border-slate-200 rounded-2xl flex items-center py-2 gap-2 px-4 group hover:bg-red-500/80 hover:border-none transition-all">
-              <ThumbsDownIcon />
-              <span className="group-hover:font-medium">{dislikes}</span>
+            <button className="border border-slate-400 hover:border-red-600 rounded-2xl flex items-center py-2 gap-2 px-4 group transition-all">
+              <ThumbsDownIcon className="group-hover:text-red-600" />
+              <span className="group-hover:text-red-600 font-medium">{dislikes}</span>
             </button>
           </div>
 
