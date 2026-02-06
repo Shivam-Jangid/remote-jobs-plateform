@@ -133,7 +133,7 @@ export default function page() {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-50/80 to-slate-100 py-20 pl-32">
+    <div className="min-h-screen py-20 pl-32">
       <div className="text-center">
         <div className="text-center flex items-center justify-center w-full h-full text-5xl">
           <span>Find the</span>
