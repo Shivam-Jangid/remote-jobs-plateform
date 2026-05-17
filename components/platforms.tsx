@@ -21,7 +21,7 @@ export function Platforms({
   href,
 }: platformItemProps) {
   return (
-    <div className="border bg-background hover:bg-muted/40 hover:ring hover:shadow-md hover:ring-purple-500/40 transition-all rounded-xl p-5 h-full">
+    <div className="border bg-background  hover:ring hover:shadow-md hover:ring-purple-500 transition-all rounded-xl p-5 h-full">
       <div className="flex flex-col justify-between h-full gap-4">
         {/* Top */}
         <div className="space-y-3">

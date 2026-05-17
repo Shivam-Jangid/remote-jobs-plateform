@@ -20,10 +20,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${font.className} bg-black text-white h-full antialiased`}
+      className={`${font.className} bg-black text-white h-full antialiased selection:text-white selection:bg-black/80`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
         {children}
       </body>
     </html>

@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero";
 import { PlaformCarouselHome } from "@/components/homePagePlatformCarousel";
+import { Navbar } from "@/components/navbar";
 import { TestimonialList } from "@/components/testimonials";
 import { companyLinks, platformLinks, resourcesLink } from "@/lib/utils";
 import Link from "next/link";
@@ -7,12 +8,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="pt-8 overflow-hidden">
+    <div >
+      <Navbar />
+      <div className="pt-8 overflow-hidden">
       <Hero />
 
       <div className="my-15 px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
-          <h1 className="text-3xl">Latest Platforms</h1>
+          <h1 className="text-3xl">Trending Platforms</h1>
 
           <p className="text-muted-foreground text-sm">
             Discover the best freelancing & remote work platforms
@@ -39,7 +42,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">FreelanceHub</h2>
+            <h2 className="text-2xl font-semibold">Remio</h2>
 
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
               Helping freelancers discover trusted platforms, remote
@@ -54,7 +57,7 @@ export default function Home() {
               {platformLinks.map((item, idx) => (
                 <Link
                   key={idx}
-                  className="linkHover transition-all"
+                  className="linkHover  transition-all"
                   href={item.href}
                 >
                   {item.title}
@@ -95,7 +98,7 @@ export default function Home() {
         </div>
 
         <div className="mt-12 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
-          <p>© 2026 FreelanceHub. All rights reserved.</p>
+          <p>© 2026 Remio. All rights reserved.</p>
 
           <div className="flex items-center gap-5">
             <Link className="linkHover transition-all" href="/terms">Terms</Link>
@@ -105,5 +108,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </div> 
   );
 }

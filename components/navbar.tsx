@@ -1,26 +1,3 @@
-// import Link from "next/link";
-// import { Button } from "./ui/button";
-
-// export function Navbar() {
-//   return (
-//     <div className="flex w-full items-center justify-between">
-//       <Link className="cursor-default " href={'/'}>Logo</Link>
-//       <div className="flex items-center gap-3 text-sm">
-//         <Link className="cursor-default transition-all hover:bg-secondary/40 px-2.5 py-1.5 rounded-sm" href={'/about'}>About</Link>
-//         <Link className="transition-all cursor-default hover:bg-secondary/40 px-2.5 py-1.5 rounded-sm" href={'/about'}>Platforms</Link>
-//         <Link className="transition-all cursor-default hover:bg-secondary/40 px-2.5 py-1.5 rounded-sm" href={'/addplatform'}>
-//         Add Platform
-//         </Link>
-//       </div>
-//       <div>
-//         <Button variant="secondary" size="lg" className="text-sm rounded-sm p-4 font-medium">
-//             Log in
-//         </Button>
-//       </div>
-//     </div>
-//   );
-// }
-
 import Link from "next/link";
 import { Button } from "./ui/button";
 
